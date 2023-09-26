@@ -11,7 +11,7 @@ const page1 = {
     createAt: new Date('2021-01-01'),
     updateAt: new Date('2021-05-01'),
   }
-}
+};
 
 const page2 = {
   title: 'Python or Js',
@@ -19,5 +19,24 @@ const page2 = {
   accounts: ['Alex'],
   status: 'close',
 }
+
+type Deskription = { 
+title: string,
+likes: number,
+accounts: string[],
+status: string,
+}
+
+type Details = {
+  details: {
+  createAt: Date,
+  updateAt: Date,
+  }
+}
+
+type Page = Deskription & Details;
+
+let page: Page;
+
 
 export {};
