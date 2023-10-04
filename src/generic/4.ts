@@ -4,14 +4,14 @@
 interface Props {
   title: string;
 }
-class Component<T extends Props> {
+class Component<T> {
   constructor (public props:T) {
 
   }
 }
 
 class Page extends Component<Props> {
-  pageInfo () {
+  pageInfo (): void {
     console.log(this.props.title);
   }
 }
